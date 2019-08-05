@@ -2,8 +2,8 @@ var http = require('http');
 var url = require('url');
 var mysql = require('mysql');
 
-var opn = require('opn');
-let redir = 0;
+//var opn = require('opn');
+//let redir = 0;
 
 http.createServer(function(req,res){
     res.writeHead(200,{'Content-Type':'text/html'});
@@ -52,10 +52,10 @@ http.createServer(function(req,res){
         }
 
 
-        if(length > 0)
+     /*   if(length > 0)
         {
           redir=1;
-        }
+        }*/
 
       
       });
@@ -77,17 +77,17 @@ http.createServer(function(req,res){
         {
             console.log('\nThe solution is: ', results[i].days);
         }
-        if(length2 > 0)
+       /* if(length2 > 0)
         {
           redir=1;
-        }
+        }*/
 
       });
 
-      if(redir > 0)
+   /*   if(redir > 0)
       {
         res.write('hello : '+ redir);
-      }
+      }*/
       
       res.end();  
 
@@ -102,9 +102,9 @@ http.createServer(function(req,res){
     
     connection.end();
 
-    if(redir > 0)
+   /* if(redir > 0)
     {
       opn('http://localhost:3000');
-    }
+    }*/
 
 }).listen(8081);
