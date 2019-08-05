@@ -11,11 +11,11 @@ http.createServer(function(req,res){
     res.write('<br/>'+ q.entdate + '<br/>' + q.days + '<br/>' + q.country + '<br/>' + q.sta);
 
     var connection = mysql.createConnection({
-    host     : "db-instance1.c7pps0mhymd3.us-east-1.rds.amazonaws.com",
-    user     : "jayakrishna",
-    password : "Rds#account1",
+    host     : "",
+    user     : "",
+    password : "",
     port     : "3306",
-    database : "eval1"
+    database : ""
     });
 
 
